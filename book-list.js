@@ -15,6 +15,7 @@ async function loadBooks() {
                 <h5 class="card-title">${book.title}</h5>
                 <h6 class="card-subtitle mb-2 text-muted">${book.isbn}</h6>
                     <div>Author: ${book.author}</div>
+                    <div>Publish Date: ${book.publish_date}</div>
                     <div>Publisher: ${book.publisher}</div>
                     <div>Number of Pages: ${book.pages}</div>
 
