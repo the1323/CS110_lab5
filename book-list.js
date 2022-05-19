@@ -17,7 +17,7 @@ async function loadBooks() {
                     <div>Author: ${book.author}</div>
                     <div>Publisher: ${book.publisher}</div>
                     <div>Number of Pages: ${book.pages}</div>
-
+                    <div>Published Date: ${book.publish_date}</div>
                     <hr>
 
                     <button type = "button" class = "btn btn-danger" onClick="deleteBook(${book.isbn})">Delete</button>
@@ -46,23 +46,11 @@ async function setEditModal(isbn) {
 
     console.log("dataaaaaaaaa");
     const book = JSON.parse(data);
-    console.log(book);
-    const {
-      isbn,
-      title,
-      subtitle,
-      author,
-      published,
-      publisher,
-      pages,
-      description,
-      website,
-    } = book;
 
     document.getElementById("isbn").value = book.isbn;
     document.getElementById("title").value = book.title;
     document.getElementById("author").value = book.author;
-    document.getElementById("publish_date").value = book.published;
+    document.getElementById("publish_date").value = book.publish_date;
     document.getElementById("publisher").value = book.publisher;
     document.getElementById("numOfPages").value = book.pages;
 
